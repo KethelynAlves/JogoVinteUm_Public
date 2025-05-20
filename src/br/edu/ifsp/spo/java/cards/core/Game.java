@@ -13,8 +13,6 @@ public class Game {
     private Player player1;
     private Player player2;
     private Score score;
-    //private final TerminalGameUi terminal = new TerminalGameUi();
-    //private final ArrayList<String> playerNames = new ArrayList<>();
     private final GameUi ui;
 
     public Game(GameUi gameUi){
@@ -23,11 +21,6 @@ public class Game {
     }
 
     private void initialize(){
-        /*for (int i = 0; i<2; i++) {
-            String name = ui.requestPlayerName(i+1);
-            playerNames.add(name);
-        }*/
-
         this.player1 = new Player(ui.requestPlayerName(1));
         this.player2 = new Player(ui.requestPlayerName(2));
 
@@ -94,7 +87,6 @@ public class Game {
         } else if(score2>score1 && score2<=21){//maior que o oponente e menor que 21
             System.out.println(this.player2.name + " ganhou.");
         }
-
     }
 
     @Override
